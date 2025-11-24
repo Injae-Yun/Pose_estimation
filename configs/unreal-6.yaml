@@ -1,0 +1,37 @@
+# --- 데이터 경로 설정 ---
+dataset_type: 'unreal-6'
+
+state_map: {'stand': 0, 'sit': 1, 'lying': 2}
+column_format: '{name}_RelLoc{suffix}'
+x_suffix: '_X'
+y_suffix: '_Y'
+
+data_paths:
+  raw_dir: 'data/Raw'
+  processed_dir: 'data/Processed'
+  results_dir: 'results'
+  h5_dir: 'data'
+  model_dir: 'models'
+
+HEADER_KEYPOINTS: [
+    "clavicle_out_l", "clavicle_out_r", "thigh_out_l", "thigh_out_r",
+    "calf_knee_l", "calf_knee_r"
+]
+
+# --- 모델별 하이퍼파라미터 설정 ---
+models:
+  model1:
+    name: 'State_Classifier'
+    data:
+      keypoint_indices: [0, 1, 2, 3, 4, 5] # 사용할 관절 인덱스
+      seq_length: 30
+    architecture:
+      num_classes: 3
+      d_model: 64
+      n_head: 4
+      num_layers: 2
+      ffn_dim: 128
+    training:
+      batch_size: 32
+      num_epochs: 20
+      learning_rate: 0.001

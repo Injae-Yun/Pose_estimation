@@ -1,0 +1,78 @@
+# =================================================================
+# User-specific ignores
+# 사용자가 요청한 특정 파일 및 디렉토리 무시
+# =================================================================
+*.csv
+*.ipynb
+*.Zone.Identifier
+/data/
+/models
+
+
+# =================================================================
+# Standard Python ignores
+# 일반적인 Python 프로젝트에서 무시하는 파일 및 디렉토리
+# =================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a CI server
+#  and may serve as documentation for the build process.
+#  So, don't ignore them by default.
+# *.manifest
+# *.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# IDE / Editor specific files
+.idea/
+.vscode/
